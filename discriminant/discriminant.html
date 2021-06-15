@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {
+                text-align: center;
+                font-style: italic;
+                background: rgb(34,213,199);
+                background: linear-gradient(0deg, rgba(34,213,199,1) 0%, rgba(53,182,162,1) 20%, 
+                rgba(50,182,128,1) 50%, rgba(131,110,63,1) 100%);
+            }
+
+            h2 {
+                font-style: italic;
+            }
+
+            .maths {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Υπολογισμός Διακρίνουσας</h1>
+        <h2>Εισάγετε τρεις αριθμούς στα παρακάτω πεδία:</h2>
+
+        <input type="number" id="numberA">
+        <input type="number" id="numberB">
+        <input type="number" id="numberC">
+        <button type="button" id="calc" onclick="disc()">Υπολογισμός!</button>
+        
+        <h2 id="result"></h2>
+
+        <div class="maths">
+            <img src="./mathimatika.jpg" alt="maths">
+        </div> 
+
+        <script src="./discriminant.js"></script>
+    </body>
+</html>
