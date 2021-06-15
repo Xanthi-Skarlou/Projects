@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Κράτηση: Car Rental Services</title>
+        <meta name="description" content="Κάντε κράτηση το αυτοκίνητο που σας αρέσει σήμερα!!" />
+        <meta name="keywords" content="Αυτοκίνητα, ενοικίαση, car rental" />
+        <meta name="author" content="Σκάρλου Ξανθή" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <h1>Car Rental <br /> Υπηρεσίες Ενοικίασης Αυτοκινήτων</h1>
+        <hr />
+        <ul>
+            <li><a href="index.html">Αρχική</a></li>
+            <li><a href="poioieimaste.html">Ποιοι είμαστε</a></li>
+            <li><a href="autokinita.html">Τα αυτοκίνητά μας</a></li>
+            <li><a href="kratisi.html">Κάντε κράτηση</a></li>
+        </ul>
+        <h2>Κάντε κράτηση</h2>
+        <form>
+            <fieldset>
+                <legend>Προσωπικά Στοιχεία</legend>
+                <label for="fname">Όνομα:</label>
+                <input type="text" id="fname" name="fname" /><br />
+
+                <label for="lname">Επώνυμο:</label>
+                <input type="text" id="lname" name="lname" /><br />
+
+                <label for="idn">Αριθμός Ταυτότητας:</label>
+                <input type="text" id="idn" name="idn" /><br />
+
+                <label for="bdate">Ημερομηνία Γέννησης</label>
+                <input type="date" id="bdate" name="bdate" /><br />
+
+                <label for="license">Κάτοχος Διπλώματος</label>
+                <input type="checkbox" name="license" id="license" /><br />
+            </fieldset>
+                
+            <label for="cartype">Επιλέξτε είδος αυτοκινήτου</label>
+            <select id="cartype" name="cartype">
+                <option value="type1">4x4</option>
+                <option value="type2">Racing car</option>
+                <option value="type3">Limo</option>
+                <option value="type4">Flying car</option>
+                <option value="type5">Family car</option>
+            </select>
+            
+            <br /><br />
+            <fieldset>
+                <legend>Πότε το χρειάζεστε;</legend>
+                <label for="pickupdate">Ημερομηνία Παραλαβής</label>
+                <input type="date" id="pickupdate" name="pickupdate" /><br />
+
+                <label for="deliverydate">Ημερομηνία Παράδοσης</label>
+                <input type="date" id="deliverydate" name="deliverydate" /><br />
+                
+                <label for="place">Επιλέξτε τόπο παραλαβής</label>
+                <input list="places" name="place" id="place" />
+                <datalist id="places">
+                    <option value="Αεροδρόμιο Θεσσαλονίκης">
+                    <option value="Αεροδρόμιο Ελ. Βενιζέλος">
+                    <option value="Αεροδρόμιο Κοζάνης">
+                </datalist>
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <legend>Τρόποι πληρωμής</legend>
+                <label for="paypal">Πληρωμή μέσω Paypal</label>
+                <input type="radio" id="paypal" name="paymenttype" value="paypal" /><br />
+                <label for="banktransfer">Κατάθεση σε λογαριασμό</label>
+                <input type="radio" id="banktransfer" name="paymenttype" value="banktransfer" /><br />
+                <label for="cashonpickup">Αντικαταβολή</label>
+                <input type="radio" id="cashonpickup" name="paymenttype" value="cash on pickup" />
+            </fieldset>
+            <br />
+            <p>Value of range is:<span id="myrange"></span></p>
+            <input type="range" onchange="showme()" id="km" name="km" min="0" max="258" step="2" />
+            <button type="button" onclick="showme()">Show me!</button>   
+        </form>
+        <script>
+            function showme() {
+                var number = document.getElementById("km").value;
+                document.getElementById("myrange").innerHTML = number;
+            }
+        </script>
+    </body>
+</html>
